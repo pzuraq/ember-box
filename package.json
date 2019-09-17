@@ -21,10 +21,13 @@
     "test:all": "ember try:each"
   },
   "dependencies": {
-    "ember-cli-babel": "^7.7.3"
+    "@glimmer/component": "^0.14.0-alpha.13",
+    "ember-cli-babel": "^7.7.3",
+    "ember-prop-modifier": "^0.1.1"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
+    "babel-eslint": "^10.0.3",
     "broccoli-asset-rev": "^3.0.0",
     "ember-cli": "~3.10.1",
     "ember-cli-dependency-checker": "^3.1.0",
@@ -41,7 +44,7 @@
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-qunit": "^4.4.1",
     "ember-resolver": "^5.0.1",
-    "ember-source": "~3.10.0",
+    "ember-source": "~3.13.0-beta.5",
     "ember-source-channel-url": "^1.1.0",
     "ember-try": "^1.0.0",
     "eslint-plugin-ember": "^6.2.0",

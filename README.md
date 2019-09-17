@@ -1,7 +1,44 @@
 ember-box
 ==============================================================================
 
-[Short description of the addon.]
+An experimental helper for better 2-way-binding:
+
+```hbs
+<Input @value={{box this.value}} />
+```
+
+Implementing `Input`:
+
+```hbs
+<input
+  value={{get-box @value}}
+  {{on "input" this.onInput}}
+>
+```
+
+```js
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { setBox } from 'ember-box';
+
+export default class Input extends Component {
+  @action
+  onInput({ target: { value } }) {
+    setBox(this.args.value, value);
+
+    if (this.args.onInput) {
+      this.args.onInput(value);
+    }
+  }
+}
+```
+
+Composing `box` values:
+
+```hbs
+<!-- Number Input -->
+<Input @value={{box @value set=this.validate}} />
+```
 
 
 Compatibility

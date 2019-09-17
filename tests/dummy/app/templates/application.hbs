@@ -1,3 +1,27 @@
-<h2 id="title">Welcome to Ember</h2>
+<div>
+  {{this.value}}
+</div>
 
-{{outlet}}
+<div>
+  <button {{on "click" this.incrementValue}}>+</button>
+</div>
+
+<div>
+  Boxed Input:
+  <Input @value={{box this.value}} />
+</div>
+
+<div>
+  Boxed Number Input:
+  <NumberInput @value={{box this.value}} />
+</div>
+
+<div>
+  Unboxed Input
+  <Input @value={{this.value}} />
+</div>
+
+<div>
+  Unboxed Number Input
+  <NumberInput @value={{this.value}} />
+</div>
