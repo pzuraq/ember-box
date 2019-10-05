@@ -123,7 +123,7 @@ export default class MyOtherComponent extends Component {
 > is because that is what is normally needed in a template.
 
 `unwrap` and `update` can also both receive plain JS values. `unwrap` will
-return the value, and `update will no-op. This allows you to write components
+return the value, and `update` will no-op. This allows you to write components
 that can optionally receive Boxes:
 
 ```hbs
